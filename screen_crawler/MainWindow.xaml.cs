@@ -30,9 +30,15 @@ namespace screen_crawler
 
         private void runAutomation_btn_Click(object sender, RoutedEventArgs e)
         {
+            string uName = userName_txt.Text;
+            string uPass = pass_txt.Text;
             //start dll  web driver from open qa
-            
-            BrowserbotLinkedin.Run();
+            BrowserbotLinkedin goTo = new BrowserbotLinkedin();
+           // BrowserbotGooglePlus goTo = new BrowserbotGooglePlus();
+           // IWebDriver startSearch = goTo.StartFF("https://plus.google.com/");
+            IWebDriver startSearch = goTo.StartFF("https://www.linkedin.com/uas/login");
+            //BrowserbotGooglePlus.Run(startSearch, uName, uPass);
+             BrowserbotLinkedin.Run(startSearch, uName, uPass);
             
             
             

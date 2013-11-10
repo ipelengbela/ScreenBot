@@ -11,29 +11,22 @@ namespace screen_crawler
    class BrowserbotLinkedin: BrowserbotCore
     {
       
-        internal static void Run()
+
+        internal static void Run(IWebDriver startSearch, string uName, string uPass)
         {
-            IWebDriver startSearch = new FirefoxDriver();
-            //navigate to site
-            startSearch.Navigate().GoToUrl("https://www.linkedin.com/uas/login");
-            //needed for slow firefox startup
-            Thread.Sleep(5000);
-            //find dom element 
             IWebElement findme = startSearch.FindElement(By.Name("session_key"));
-            findme.SendKeys("serendipityok@gmx.us");
+            findme.SendKeys(uName);
             findme = startSearch.FindElement(By.Name("session_password"));
-            findme.SendKeys("1fatmonkey");
+            findme.SendKeys(uPass);
             findme = startSearch.FindElement(By.Name("signin"));
             findme.Click();
             //
-            Thread.Sleep(2000);
+            Thread.Sleep(10000);
             findme = startSearch.FindElement(By.Name("postText"));
             findme.Click();
             findme.SendKeys("er mer gerd");
             findme = startSearch.FindElement(By.Id("share-submit"));
             findme.Click();
         }
-
-
     }
 }
