@@ -32,16 +32,47 @@ namespace screen_crawler
         {
             string uName = userName_txt.Text;
             string uPass = pass_txt.Text;
-            //start dll  web driver from open qa
-            BrowserbotLinkedin goTo = new BrowserbotLinkedin();
-           // BrowserbotGooglePlus goTo = new BrowserbotGooglePlus();
-           // IWebDriver startSearch = goTo.StartFF("https://plus.google.com/");
-            IWebDriver startSearch = goTo.StartFF("https://www.linkedin.com/uas/login");
-            //BrowserbotGooglePlus.Run(startSearch, uName, uPass);
-             BrowserbotLinkedin.Run(startSearch, uName, uPass);
-            
+            //start dll  web driver from open QA
+
+            IWebDriver startSearch;
+            switch (Dervalue)
+            {
+                case 1:
+                    startSearch = BBotUtility.StartBrowser(setURL);
+                    BrowserbotLinkedin.Run(startSearch, uName, uPass);
+                    break;
+                case 2 :
+                    startSearch = BBotUtility.StartBrowser(setURL);
+                    BrowserbotGooglePlus.Run(startSearch, uName, uPass);
+                    break;
+                    }
             
             
         }
+
+        private void _Rdo_Checked(object sender, RoutedEventArgs e)
+        {
+            RadioButton rdo = sender as RadioButton;
+
+            switch (rdo.Name)
+            {
+                case "lkdn_Rdo":
+                    setURL = "https://www.linkedin.com/uas/login";
+                    Dervalue = 1;
+                    break;
+                case "gPlus_Rdo":
+                    setURL = "https://plus.google.com/";
+                    Dervalue = 2;
+                    break;
+                case "facBook_Rdo":
+                    setURL = "https://facebook.com/";
+                    Dervalue = 3;
+                    break;
+
+            }
+          
+        }
+        public string setURL;
+        public int Dervalue;
     }
 }

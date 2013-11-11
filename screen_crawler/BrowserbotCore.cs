@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
@@ -14,8 +11,9 @@ namespace screen_crawler
        /// <summary>
        /// used to start mozilla FireFox
        /// </summary>
-       /// <param name="Url"></param>
+       /// <param name="Url">site url</param>
        /// <returns></returns>
+       /// 
        public IWebDriver StartFF(string Url)
        {
            IWebDriver startSearch = new FirefoxDriver();

@@ -8,7 +8,7 @@ using OpenQA.Selenium.Firefox;
 
 namespace screen_crawler
 {
-   class BrowserbotLinkedin: BrowserbotCore
+   class BrowserbotLinkedin :TextGen
     {
       
 
@@ -28,5 +28,7 @@ namespace screen_crawler
             findme = startSearch.FindElement(By.Id("share-submit"));
             findme.Click();
         }
+
+       
     }
 }
