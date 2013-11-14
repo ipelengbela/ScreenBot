@@ -12,20 +12,18 @@ namespace screen_crawler
     {
       
 
-        internal static void Run(IWebDriver startSearch, string uName, string uPass)
+        internal static void Run(IWebDriver startSearch, string uName, string uPass, int derValue)
         {
-            IWebElement findme = startSearch.FindElement(By.Name("session_key"));
-            findme.SendKeys(uName);
-            findme = startSearch.FindElement(By.Name("session_password"));
-            findme.SendKeys(uPass);
-            findme = startSearch.FindElement(By.Name("signin"));
-            findme.Click();
+           
+            IWebDriver searchStart = BBotUtility.LogMeIn(startSearch, uName, uPass, derValue);
             //
+            IWebElement findme;
             Thread.Sleep(10000);
-            findme = startSearch.FindElement(By.Name("postText"));
+            findme = searchStart.FindElement(By.Name("postText"));
             findme.Click();
-            findme.SendKeys("er mer gerd");
-            findme = startSearch.FindElement(By.Id("share-submit"));
+            findme.SendKeys("more abstraction");
+            Thread.Sleep(1000);// change this to implicitly wait
+            findme = searchStart.FindElement(By.Id("share-submit"));
             findme.Click();
         }
 

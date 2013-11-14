@@ -34,18 +34,25 @@ namespace screen_crawler
             string uPass = pass_txt.Text;
             //start dll  web driver from open QA
 
-            IWebDriver startSearch;
+           
+                IWebDriver startSearch;
+                startSearch = BBotUtility.StartBrowser(setURL);
+                
             switch (Dervalue)
-            {
-                case 1:
-                    startSearch = BBotUtility.StartBrowser(setURL);
-                    BrowserbotLinkedin.Run(startSearch, uName, uPass);
-                    break;
-                case 2 :
-                    startSearch = BBotUtility.StartBrowser(setURL);
-                    BrowserbotGooglePlus.Run(startSearch, uName, uPass);
-                    break;
-                    }
+                {  // need to change to a generic method instead of this
+                    case 1:
+                        BrowserbotLinkedin.Run(startSearch, uName, uPass, Dervalue);
+                        break;
+                    case 2:
+                        BrowserbotGooglePlus.Run(startSearch, uName, uPass, Dervalue);
+                        break;
+                    case 3:
+                        BrowserbotFacebook.Run(startSearch, uName, uPass, Dervalue);
+                        break;
+                    case 4 :
+                        BrowserbotTwitter.Run(startSearch, uName, uPass, Dervalue);
+                        break;
+                }
             
             
         }
@@ -67,6 +74,10 @@ namespace screen_crawler
                 case "facBook_Rdo":
                     setURL = "https://facebook.com/";
                     Dervalue = 3;
+                    break;
+                case "Twit_Rdo" :
+                    setURL = "https://twitter.com/";
+                    Dervalue = 4;
                     break;
 
             }
