@@ -59,9 +59,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="BrowserbotFacebook.cs" />
-    <Compile Include="BrowserbotTwitter.cs" />
-    <Compile Include="TextGen.cs" />
+    <Compile Include="BUtility\BBotChecker.cs" />
+    <Compile Include="BUtility\BStartBot.cs" />
+    <Compile Include="BSocial\BrowserbotFacebook.cs" />
+    <Compile Include="BSocial\BrowserbotTwitter.cs" />
+    <Compile Include="BSocial\TextGen.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -70,12 +72,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BBotUtility.cs" />
-    <Compile Include="BrowserbotCore.cs" />
-    <Compile Include="BrowserbotGooglePlus.cs" />
-    <Compile Include="BrowserbotLinkedin.cs" />
-    <Compile Include="IBotNeeds.cs" />
-    <Compile Include="IRandomTextGen.cs" />
+    <Compile Include="BUtility\BBotUtility.cs" />
+    <Compile Include="BUtility\BrowserbotCore.cs" />
+    <Compile Include="BSocial\BrowserbotGooglePlus.cs" />
+    <Compile Include="BSocial\BrowserbotLinkedin.cs" />
+    <Compile Include="BUtility\IBotNeeds.cs" />
+    <Compile Include="BSocial\IRandomTextGen.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -107,6 +109,7 @@
     </None>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

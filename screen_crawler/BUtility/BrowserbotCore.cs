@@ -2,9 +2,10 @@
 using System.Threading;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
+using screen_crawler.BSocial;
 
 
-namespace screen_crawler
+namespace screen_crawler.BUtility
 {
    abstract class BrowserbotCore : IBotNeeds
     {

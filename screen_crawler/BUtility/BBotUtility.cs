@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
-namespace screen_crawler
+using screen_crawler.BSocial;
+
+namespace screen_crawler.BUtility
 {
     class BBotUtility : BrowserbotCore
     {

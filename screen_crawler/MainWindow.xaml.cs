@@ -16,6 +16,8 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using System.Threading;
 //using OpenQA.Selenium.Chrome; // must download chromedriver download from google api in order for this dll to work
+using screen_crawler.BUtility;
+
 namespace screen_crawler
 {
     /// <summary>
@@ -30,57 +32,28 @@ namespace screen_crawler
 
         private void runAutomation_btn_Click(object sender, RoutedEventArgs e)
         {
+            IWebDriver startSearch;
             string uName = userName_txt.Text;
             string uPass = pass_txt.Text;
             //start dll  web driver from open QA
 
            
-                IWebDriver startSearch;
+               
                 startSearch = BBotUtility.StartBrowser(setURL);
-                
-            switch (Dervalue)
-                {  // need to change to a generic method instead of this
-                    case 1:
-                        BrowserbotLinkedin.Run(startSearch, uName, uPass, Dervalue);
-                        break;
-                    case 2:
-                        BrowserbotGooglePlus.Run(startSearch, uName, uPass, Dervalue);
-                        break;
-                    case 3:
-                        BrowserbotFacebook.Run(startSearch, uName, uPass, Dervalue);
-                        break;
-                    case 4 :
-                        BrowserbotTwitter.Run(startSearch, uName, uPass, Dervalue);
-                        break;
-                }
+                BStartBot.RunApp(startSearch, uName, uPass, Dervalue);
+           
+           
             
             
         }
 
         private void _Rdo_Checked(object sender, RoutedEventArgs e)
         {
-            RadioButton rdo = sender as RadioButton;
+            BBotChecker.SelectWebAddress(sender);
+            setURL = BBotChecker.SetURL;
+            Dervalue = BBotChecker.Dervalue;
 
-            switch (rdo.Name)
-            {
-                case "lkdn_Rdo":
-                    setURL = "https://www.linkedin.com/uas/login";
-                    Dervalue = 1;
-                    break;
-                case "gPlus_Rdo":
-                    setURL = "https://plus.google.com/";
-                    Dervalue = 2;
-                    break;
-                case "facBook_Rdo":
-                    setURL = "https://facebook.com/";
-                    Dervalue = 3;
-                    break;
-                case "Twit_Rdo" :
-                    setURL = "https://twitter.com/";
-                    Dervalue = 4;
-                    break;
-
-            }
+            
           
         }
         public string setURL;

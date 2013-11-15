@@ -1,90 +1,115 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="screen_crawler.App" Collapsed="true">
-    <Position X="5.25" Y="0.5" Width="1.5" />
+  <Class Name="screen_crawler.App">
+    <Position X="11.25" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>App.xaml.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="screen_crawler.BBotUtility" Collapsed="true">
-    <Position X="0.5" Y="2" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
-      <FileName>BBotUtility.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="screen_crawler.BrowserbotCore" Collapsed="true">
-    <Position X="0.5" Y="1" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAACAAAAA=</HashCode>
-      <FileName>BrowserbotCore.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="screen_crawler.BrowserbotGooglePlus" Collapsed="true">
-    <Position X="6.25" Y="4.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
-      <FileName>BrowserbotGooglePlus.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="screen_crawler.BrowserbotLinkedin" Collapsed="true">
-    <Position X="4.25" Y="4.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
-      <FileName>BrowserbotLinkedin.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="screen_crawler.MainWindow" Collapsed="true">
-    <Position X="7" Y="0.5" Width="1.5" />
+  <Class Name="screen_crawler.MainWindow">
+    <Position X="11.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAQAAAAAAAAgAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
       <FileName>MainWindow.xaml.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="screen_crawler.TextGen">
-    <Position X="2.75" Y="0.5" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Nested Types" Collapsed="false" />
-    </Compartments>
+  <Class Name="screen_crawler.BSocial.BrowserbotFacebook">
+    <Position X="7" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>BSocial\BrowserbotFacebook.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="screen_crawler.BSocial.BrowserbotGooglePlus">
+    <Position X="8.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>BSocial\BrowserbotGooglePlus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="screen_crawler.BSocial.BrowserbotLinkedin">
+    <Position X="3.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>BSocial\BrowserbotLinkedin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="screen_crawler.BSocial.BrowserbotTwitter">
+    <Position X="5.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>BSocial\BrowserbotTwitter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="screen_crawler.BSocial.TextGen">
+    <Position X="0.5" Y="0.5" Width="1.5" />
     <NestedTypes>
-      <Enum Name="screen_crawler.TextGen.Day">
+      <Enum Name="screen_crawler.BSocial.TextGen.Day" Collapsed="true">
         <TypeIdentifier>
-          <NewMemberFileName>TextGen.cs</NewMemberFileName>
+          <NewMemberFileName>BSocial\TextGen.cs</NewMemberFileName>
         </TypeIdentifier>
       </Enum>
     </NestedTypes>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
-      <FileName>TextGen.cs</FileName>
+      <FileName>BSocial\TextGen.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="screen_crawler.Properties.Resources" Collapsed="true">
-    <Position X="5.25" Y="1.5" Width="1.5" />
+  <Class Name="screen_crawler.BUtility.BBotChecker">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIgAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>BUtility\BBotChecker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="screen_crawler.BUtility.BBotUtility">
+    <Position X="4" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>BUtility\BBotUtility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="screen_crawler.BUtility.BrowserbotCore">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>BUtility\BrowserbotCore.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="screen_crawler.BUtility.BStartBot">
+    <Position X="2.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>BUtility\BStartBot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="screen_crawler.Properties.Resources">
+    <Position X="13.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Class Name="screen_crawler.Properties.Settings" Collapsed="true">
-    <Position X="7" Y="1.5" Width="1.5" />
+  <Class Name="screen_crawler.Properties.Settings">
+    <Position X="13.25" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
   </Class>
-  <Interface Name="screen_crawler.IBotNeeds" Collapsed="true">
-    <Position X="5.25" Y="2.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAACAAAAA=</HashCode>
-      <FileName>IBotNeeds.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
-  <Interface Name="screen_crawler.IRandomTextGen" Collapsed="true">
-    <Position X="7" Y="2.75" Width="1.5" />
+  <Interface Name="screen_crawler.BSocial.IRandomTextGen">
+    <Position X="10.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
-      <FileName>IRandomTextGen.cs</FileName>
+      <FileName>BSocial\IRandomTextGen.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="screen_crawler.BUtility.IBotNeeds">
+    <Position X="8.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>BUtility\IBotNeeds.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

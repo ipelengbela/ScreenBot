@@ -1,8 +1,9 @@
 ﻿using System;
 using OpenQA.Selenium;
+using screen_crawler.BSocial;
 
 
-namespace screen_crawler
+namespace screen_crawler.BUtility
 {
     interface IBotNeeds
     {

@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using screen_crawler.BUtility;
 
-namespace screen_crawler
+namespace screen_crawler.BSocial
 {
     class BrowserbotTwitter : TextGen
     {

@@ -5,8 +5,9 @@ using System.Text;
 using System.Threading;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
+using screen_crawler.BUtility;
 
-namespace screen_crawler
+namespace screen_crawler.BSocial
 {
    class BrowserbotLinkedin :TextGen
     {

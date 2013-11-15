@@ -5,7 +5,9 @@ using System.Text;
 using System.Threading;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
-namespace screen_crawler
+using screen_crawler.BUtility;
+
+namespace screen_crawler.BSocial
 {
     class BrowserbotGooglePlus : TextGen
     {

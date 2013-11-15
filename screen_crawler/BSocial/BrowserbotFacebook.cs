@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using OpenQA.Selenium;
+using screen_crawler.BUtility;
 
-namespace screen_crawler
+namespace screen_crawler.BSocial
 {
     class BrowserbotFacebook : TextGen
     {
