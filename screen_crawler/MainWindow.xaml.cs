@@ -1,22 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 //using OpenQA.Selenium.IE;// must download iedriver server dll from google code in order for this dll to work
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using System.Threading;
 //using OpenQA.Selenium.Chrome; // must download chromedriver download from google api in order for this dll to work
 using screen_crawler.BUtility;
+using Microsoft.Win32;
 
 namespace screen_crawler
 {
@@ -61,7 +57,11 @@ namespace screen_crawler
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            string r = ReadExcel.ReadOpenExcel();
+
+            OpenFileDialog dg = new OpenFileDialog();
+            dg.ShowDialog();
+            ReadFile.FilePath = dg.FileName;
+            string r = ReadFile.ReadCSV();
             MessageBox.Show(r);
         }
     }

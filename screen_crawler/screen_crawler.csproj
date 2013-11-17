@@ -36,6 +36,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -64,7 +65,7 @@
     <Compile Include="BSocial\BrowserbotFacebook.cs" />
     <Compile Include="BSocial\BrowserbotTwitter.cs" />
     <Compile Include="BSocial\TextGen.cs" />
-    <Compile Include="ReadExcel.cs" />
+    <Compile Include="ReadFile.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
