@@ -64,6 +64,7 @@
     <Compile Include="BSocial\BrowserbotFacebook.cs" />
     <Compile Include="BSocial\BrowserbotTwitter.cs" />
     <Compile Include="BSocial\TextGen.cs" />
+    <Compile Include="ReadExcel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

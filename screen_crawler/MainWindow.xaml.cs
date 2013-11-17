@@ -58,5 +58,11 @@ namespace screen_crawler
         }
         public string setURL;
         public int Dervalue;
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            string r = ReadExcel.ReadOpenExcel();
+            MessageBox.Show(r);
+        }
     }
 }
