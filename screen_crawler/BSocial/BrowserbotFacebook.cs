@@ -18,7 +18,7 @@ namespace screen_crawler.BSocial
 
          
             startDerSearch.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5.0));
-            
+            // changed this to a config file since this may change 
             startDerSearch.Navigate().GoToUrl("https://www.facebook.com/?sk=nf");
             findEle = startDerSearch.FindElement(By.XPath("//textarea[@name='xhpc_message']"));
             

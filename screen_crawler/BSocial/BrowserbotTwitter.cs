@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using screen_crawler.BUtility;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Firefox;
 
 namespace screen_crawler.BSocial
 {
@@ -10,7 +12,9 @@ namespace screen_crawler.BSocial
     {
         internal static void Run(OpenQA.Selenium.IWebDriver startSearch, string uName, string uPass, int derValue)
         {
-            throw new NotImplementedException();
+            IWebDriver startDerSeach = BBotUtility.LogMeIn(startSearch, uName, uPass, derValue);
+            IWebElement findDerEle;
+            startDerSeach.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10.0));
         }
     }
 }
