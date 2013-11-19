@@ -13,6 +13,7 @@
             <RadioButton Content="Google Plus"  Name="gPlus_Rdo" FontSize="20" Height="Auto" Padding="9,0,0,0" Margin="2" Checked="_Rdo_Checked" />
             <RadioButton Content="Facebook"  Name="facBook_Rdo" FontSize="20" Height="Auto" Padding="9,0,0,0" Margin="2"  Checked="_Rdo_Checked"/>
             <RadioButton Content="Twitter"  Name="Twit_Rdo" FontSize="20" Height="Auto" Padding="9,0,0,0" Margin="2"  Checked="_Rdo_Checked"/>
+            <RadioButton Content="searchAll"  Name="All_Rdo" FontSize="20" Height="Auto" Padding="9,0,0,0" Margin="2"  Checked="_Rdo_Checked"/>
         </StackPanel>
         <Button Content="Button" Height="23" HorizontalAlignment="Left" Margin="14,239,0,0" Name="button1" VerticalAlignment="Top" Width="75" Click="button1_Click" />
     </Grid>

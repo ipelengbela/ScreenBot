@@ -36,8 +36,22 @@ namespace screen_crawler
            
                
                 startSearch = BBotUtility.StartBrowser(setURL);
-                BStartBot.RunApp(startSearch, uName, uPass, Dervalue);
-           
+                if (Dervalue == 5)
+                {
+                   //this needs fixing
+                    // int aValue = 1;
+                  //  while (aValue != 4)
+                   // {
+                        //bug here
+                      
+                   // }
+                    //add start search here
+                    BStartBot.RunAllSocialMediaSites(Dervalue);
+                }
+                else
+                {
+                    BStartBot.RunApp(startSearch, uName, uPass, Dervalue);
+                }
            
             
             

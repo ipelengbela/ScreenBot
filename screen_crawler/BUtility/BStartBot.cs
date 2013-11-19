@@ -27,5 +27,23 @@ namespace screen_crawler.BUtility
             }
 
         }
+
+        //may delete
+        internal static void RunAllSocialMediaSites(int Dervalue)
+        {
+            Dervalue -= 1 ;
+            for (int socialRun = 1; Dervalue >= socialRun ; socialRun++)
+            {
+              //needed to set radio value that selectwebaddress depends on
+                var mediaSite =  BBotChecker.SetRadioName(socialRun);
+             // sets the url
+                BBotChecker.SelectWebAddress(mediaSite);
+
+                /////////////////////////////////////////////////////
+                //RunApp(startSearch, uName, uPass, socialRun);
+            }
+        }
+
+        
     }
 }

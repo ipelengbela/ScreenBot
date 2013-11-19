@@ -15,6 +15,12 @@ namespace screen_crawler.BSocial
             IWebDriver startDerSeach = BBotUtility.LogMeIn(startSearch, uName, uPass, derValue);
             IWebElement findDerEle;
             startDerSeach.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10.0));
+            findDerEle = startDerSeach.FindElement(By.XPath("//div[@id='tweet-box-mini-home-profile']"));
+            findDerEle.Click();
+            findDerEle.SendKeys("er mer gerd");
+            startDerSeach.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10.0));
+            findDerEle = startDerSeach.FindElement(By.XPath("//button[@class='btn primary-btn tweet-action js-tweet-btn']"));
+            findDerEle.Click();
         }
     }
 }
