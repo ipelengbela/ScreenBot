@@ -66,8 +66,9 @@ namespace screen_crawler.BUtility
 
         public static string SetURL {get; set;}
         public static int Dervalue {get; set;}
-
-
        
+        public static string[] Passwords { get; set; }
+        public static string[] Usernames {get; set;}
+        
     }
 }

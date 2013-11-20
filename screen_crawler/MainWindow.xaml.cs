@@ -29,28 +29,26 @@ namespace screen_crawler
         private void runAutomation_btn_Click(object sender, RoutedEventArgs e)
         {
             IWebDriver startSearch;
-            string uName = userName_txt.Text;
-            string uPass = pass_txt.Text;
+            
             //start dll  web driver from open QA
 
            
                
                 startSearch = BBotUtility.StartBrowser(setURL);
-                if (Dervalue == 5)
+                if (Dervalue != 5)
                 {
-                   //this needs fixing
-                    // int aValue = 1;
-                  //  while (aValue != 4)
-                   // {
-                        //bug here
-                      
-                   // }
-                    //add start search here
-                    BStartBot.RunAllSocialMediaSites(Dervalue);
+                    string uName = userName_txt.Text;
+                    string uPass = pass_txt.Text;
+                    BStartBot.RunApp(startSearch, uName, uPass, Dervalue); 
                 }
                 else
                 {
-                    BStartBot.RunApp(startSearch, uName, uPass, Dervalue);
+
+                    //BBotChecker setValues = new BBotChecker();
+                    BBotChecker.Passwords = new[] { password1.Text, password2.Text, password3.Text, password4.Text };
+                    BBotChecker.Usernames = new[] { userName1.Text, userName2.Text, userName3.Text, userName4.Text };
+                   
+                    BStartBot.RunAllSocialMediaSites(Dervalue, startSearch);
                 }
            
             
@@ -63,6 +61,17 @@ namespace screen_crawler
             setURL = BBotChecker.SetURL;
             Dervalue = BBotChecker.Dervalue;
 
+            //hide txtbox show others
+            if (Dervalue == 5)
+            {
+                Canvas_Single.Visibility = Visibility.Hidden;
+                multisocialCanvas.Visibility = Visibility.Visible;
+             }
+            else
+            {
+                Canvas_Single.Visibility = Visibility.Visible;
+                multisocialCanvas.Visibility = Visibility.Hidden;
+            }
             
           
         }

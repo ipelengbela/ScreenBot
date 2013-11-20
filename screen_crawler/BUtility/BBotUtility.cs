@@ -21,10 +21,19 @@ namespace screen_crawler.BUtility
 
         public static IWebDriver LogMeIn(IWebDriver startSearch,string uName, string uPass, int derValue)
         {
+            /*
+            WebDriverWait wait = new WebDriverWait(startSearch, TimeSpan.FromSeconds(10));
+        IWebElement myDynamicElement = wait.Until<IWebElement>((d) =>
+                  {
+        return d.FindElement(By.Id("someDynamicElement"));
+                 });
+             */
             IWebElement findme;
             switch (derValue)
             {
                 case 1: // lkdn
+                    startSearch.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(30));
+                    System.Threading.Thread.Sleep(10000);
                     findme = startSearch.FindElement(By.Name("session_key"));
                     findme.SendKeys(uName);
                     findme = startSearch.FindElement(By.Name("session_password"));

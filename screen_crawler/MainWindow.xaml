@@ -4,10 +4,6 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <Button Content="Button" Height="23" HorizontalAlignment="Left" Margin="344,254,0,0" Name="runAutomation_btn" VerticalAlignment="Top" Width="75" Click="runAutomation_btn_Click" IsDefault="True" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="213,209,0,0" Name="userName_txt" VerticalAlignment="Top" Width="120" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="354,209,0,0" Name="pass_txt" VerticalAlignment="Top" Width="120" />
-        <Label Content="user Name" Height="28" HorizontalAlignment="Left" Margin="213,181,0,0" Name="label1" VerticalAlignment="Top" />
-        <Label Content="password" Height="28" HorizontalAlignment="Left" Margin="354,181,0,0" Name="label2" VerticalAlignment="Top" />
         <StackPanel Height="154" HorizontalAlignment="Left" Margin="12,32,0,0" Name="stackPanel1" VerticalAlignment="Top" Width="182" Visibility="Visible" Cursor="Hand" ToolTip="select Social media to automatically comment " UseLayoutRounding="True">
             <RadioButton Content="LinkedIn"  Name="lkdn_Rdo" FontSize="20" Height="Auto" Padding="9,0,0,0" Margin="2" Checked="_Rdo_Checked" />
             <RadioButton Content="Google Plus"  Name="gPlus_Rdo" FontSize="20" Height="Auto" Padding="9,0,0,0" Margin="2" Checked="_Rdo_Checked" />
@@ -16,5 +12,29 @@
             <RadioButton Content="searchAll"  Name="All_Rdo" FontSize="20" Height="Auto" Padding="9,0,0,0" Margin="2"  Checked="_Rdo_Checked"/>
         </StackPanel>
         <Button Content="Button" Height="23" HorizontalAlignment="Left" Margin="14,239,0,0" Name="button1" VerticalAlignment="Top" Width="75" Click="button1_Click" />
+        <Canvas Height="100" HorizontalAlignment="Left" Margin="203,12,0,0" Name="Canvas_Single" VerticalAlignment="Top" Width="282">
+            <TextBox Height="23" Name="userName_txt" Width="120" Canvas.Left="15" Canvas.Top="34" />
+            <TextBox Height="23" Name="pass_txt" Width="120" Canvas.Left="156" Canvas.Top="34" />
+            <Label Content="user Name" Height="28" Name="genericname" Canvas.Left="15" Canvas.Top="6" />
+            <Label Content="password" Height="28" Name="genericpass" Canvas.Left="156" Canvas.Top="6" />
+        </Canvas>
+        <Canvas Height="236" HorizontalAlignment="Left" Margin="203,12,0,0" Name="multisocialCanvas" VerticalAlignment="Top" Width="282" Visibility="Hidden">
+            <Label Canvas.Left="6" Canvas.Top="6" Content="Linkedin Name" Height="28" Name="label1" />
+            <Label Canvas.Left="152" Canvas.Top="6" Content="Linkedin Password" Height="28" Name="label2" />
+            <Label Canvas.Left="6" Canvas.Top="68" Content="google name" Height="28" Name="label3" />
+            <Label Canvas.Left="150" Canvas.Top="68" Content="google password" Height="28" Name="label4" />
+            <Label Canvas.Left="6" Canvas.Top="120" Content="Facebook Name" Height="28" Name="label5" />
+            <Label Canvas.Left="147" Canvas.Top="120" Content="Facebook password" Height="28" Name="label6" />
+            <Label Canvas.Left="151" Canvas.Top="177" Content="Twitter Password" Height="28" Name="label7" />
+            <Label Canvas.Left="5" Canvas.Top="177" Content="Twitter Name" Height="28" Name="label8" />
+            <TextBox Canvas.Left="6" Canvas.Top="39" Height="23" Name="userName1" Width="120" />
+            <TextBox Canvas.Left="6" Canvas.Top="100" Height="23" Name="userName2" Width="120" />
+            <TextBox Canvas.Left="6" Canvas.Top="148" Height="23" Name="userName3" Width="120" />
+            <TextBox Canvas.Left="6" Canvas.Top="207" Height="23" Name="userName4" Width="120" />
+            <TextBox Canvas.Left="150" Canvas.Top="39" Height="23" Name="password1" Width="120" />
+            <TextBox Canvas.Left="150" Canvas.Top="100" Height="23" Name="password2" Width="120" />
+            <TextBox Canvas.Left="152" Canvas.Top="152" Height="23" Name="password3" Width="120" />
+            <TextBox Canvas.Left="152" Canvas.Top="207" Height="23" Name="password4" Width="120" />
+        </Canvas>
     </Grid>
 </Window>

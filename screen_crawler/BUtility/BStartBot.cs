@@ -29,21 +29,27 @@ namespace screen_crawler.BUtility
         }
 
         //may delete
-        internal static void RunAllSocialMediaSites(int Dervalue)
+        internal static void RunAllSocialMediaSites(int Dervalue, OpenQA.Selenium.IWebDriver startSearch)
         {
+            //BBotChecker nr = new BBotChecker();
+            string uName ="",  uPass ="";
             Dervalue -= 1 ;
             for (int socialRun = 1; Dervalue >= socialRun ; socialRun++)
             {
               //needed to set radio value that selectwebaddress depends on
                 var mediaSite =  BBotChecker.SetRadioName(socialRun);
              // sets the url
+                System.Threading.Thread.Sleep(10000);
                 BBotChecker.SelectWebAddress(mediaSite);
+                startSearch.Navigate().GoToUrl(BBotChecker.SetURL);
 
-                /////////////////////////////////////////////////////
-                //RunApp(startSearch, uName, uPass, socialRun);
+               uPass = BBotChecker.Passwords[socialRun -1];
+               uName = BBotChecker.Usernames[socialRun -1 ];
+               
+               RunApp(startSearch, uName, uPass, socialRun);
             }
         }
 
-        
+       
     }
 }

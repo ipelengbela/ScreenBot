@@ -19,10 +19,10 @@ namespace screen_crawler.BSocial
             IWebDriver searchStart = BBotUtility.LogMeIn(startSearch, uName, uPass, derValue);
             //
             IWebElement findme;
-            Thread.Sleep(10000);
+            startSearch.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(20.0));
             findme = searchStart.FindElement(By.Name("postText"));
             findme.Click();
-            findme.SendKeys("more abstraction");
+            findme.SendKeys("hello li9nkedin");
             Thread.Sleep(1000);// change this to implicitly wait
             findme = searchStart.FindElement(By.Id("share-submit"));
             findme.Click();
