@@ -26,6 +26,11 @@ namespace screen_crawler
             InitializeComponent();
         }
 
+        /// <summary>
+        /// starts the automation of social media based on what the value is 
+        /// </summary>
+        /// <param name="sender">the button</param>
+        /// <param name="e">the event of button</param>
         private void runAutomation_btn_Click(object sender, RoutedEventArgs e)
         {
             IWebDriver startSearch;
@@ -54,7 +59,11 @@ namespace screen_crawler
             
             
         }
-
+        /// <summary>
+        /// depending on what is checked it sets the uri for its run
+        /// </summary>
+        /// <param name="sender">the radio button</param>
+        /// <param name="e">radio button event</param>
         private void _Rdo_Checked(object sender, RoutedEventArgs e)
         {
             BBotChecker.SelectWebAddress(sender);
@@ -78,6 +87,11 @@ namespace screen_crawler
         public string setURL;
         public int Dervalue;
 
+        /// <summary>
+        /// selects csv file which is going to be used for random string generation based on text file
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, RoutedEventArgs e)
         {
 

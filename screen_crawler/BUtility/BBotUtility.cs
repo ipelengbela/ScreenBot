@@ -11,6 +11,11 @@ namespace screen_crawler.BUtility
     class BBotUtility : BrowserbotCore
     {
         //public static IWebDriver StartBrowser(string url, int whatBrowser) { }
+       /// <summary>
+       /// starts the web browser for the first time
+       /// </summary>
+       /// <param name="url">the url where it points to</param>
+       /// <returns></returns>
         public static IWebDriver StartBrowser(string url)
         { IWebDriver rs;
             BBotUtility runMe = new BBotUtility();
@@ -18,7 +23,14 @@ namespace screen_crawler.BUtility
            return rs;
 
         }
-
+        /// <summary>
+        /// logs you into the website
+        /// </summary>
+        /// <param name="startSearch">contains the web page</param>
+        /// <param name="uName">user name</param>
+        /// <param name="uPass">password</param>
+        /// <param name="derValue">value to select login site param</param>
+        /// <returns></returns>
         public static IWebDriver LogMeIn(IWebDriver startSearch,string uName, string uPass, int derValue)
         {
             /*

@@ -10,6 +10,14 @@ namespace screen_crawler.BSocial
     class BrowserbotFacebook : TextGen
     {
         //may need to change this method to generic
+
+        /// <summary>
+        /// searches DOM  in order to comment 
+        /// </summary>
+        /// <param name="startSearch">iweb driver that contains ff/DOM</param>
+        /// <param name="uName">name</param>
+        /// <param name="uPass">pass</param>
+        /// <param name="derValue">value for switch/case to log in</param>
         internal static void Run(OpenQA.Selenium.IWebDriver startSearch, string uName, string uPass, int derValue)
         {
             IWebDriver startDerSearch = BBotUtility.LogMeIn(startSearch, uName, uPass, derValue);

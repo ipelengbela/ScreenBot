@@ -11,6 +11,13 @@ namespace screen_crawler.BSocial
 {
     class BrowserbotGooglePlus : TextGen
     {
+        /// <summary>
+        /// looks for DOM objects to comment on google plus
+        /// </summary>
+        /// <param name="startSearch">DOM/</param>
+        /// <param name="uName">name</param>
+        /// <param name="uPass">pass</param>
+        /// <param name="derValue">what value to log in based on bbotutility</param>
         internal static void Run(IWebDriver startSearch, string uName, string uPass, int derValue)
         {
             IWebDriver startDerSearch = BBotUtility.LogMeIn(startSearch, uName, uPass, derValue);

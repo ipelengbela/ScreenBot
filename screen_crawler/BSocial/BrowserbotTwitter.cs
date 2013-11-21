@@ -10,6 +10,13 @@ namespace screen_crawler.BSocial
 {
     class BrowserbotTwitter : TextGen
     {
+        /// <summary>
+        /// looks for dom objects to comment on twitter
+        /// </summary>
+        /// <param name="startSearch">Dom</param>
+        /// <param name="uName">name</param>
+        /// <param name="uPass">pass</param>
+        /// <param name="derValue">bbot utility value/login value</param>
         internal static void Run(OpenQA.Selenium.IWebDriver startSearch, string uName, string uPass, int derValue)
         {
             IWebDriver startDerSeach = BBotUtility.LogMeIn(startSearch, uName, uPass, derValue);

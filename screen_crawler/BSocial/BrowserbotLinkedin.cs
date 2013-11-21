@@ -12,7 +12,13 @@ namespace screen_crawler.BSocial
    class BrowserbotLinkedin :TextGen
     {
       
-
+       /// <summary>
+       /// comments on linked in after loging in
+       /// </summary>
+       /// <param name="startSearch">iweb driver DOM/firefox</param>
+       /// <param name="uName">name</param>
+       /// <param name="uPass">password</param>
+       /// <param name="derValue">to know what to run for logging into site</param>
         internal static void Run(IWebDriver startSearch, string uName, string uPass, int derValue)
         {
            

@@ -6,9 +6,9 @@ namespace screen_crawler
     class ReadFile
     {
         /// <summary>
-        /// reads CSV file 
+        /// reads CSV file that contains random strings
         /// </summary>
-        /// <returns></returns>
+        /// <returns> will return a string/array of texts</returns>
         internal static string ReadCSV()
         {
             string data ="";

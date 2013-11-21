@@ -8,7 +8,10 @@ namespace screen_crawler.BUtility
 {
     class BBotChecker : BrowserbotCore
     {
-     
+     /// <summary>
+     /// sets web address
+     /// </summary>
+     /// <param name="sender">radio button as sender</param>
         internal static void SelectWebAddress(object sender)
         {
 
@@ -39,6 +42,12 @@ namespace screen_crawler.BUtility
             }
         }
         // may delete
+
+        /// <summary>
+        /// lazy way to mimic a radio button(set value) needed to run selectwebaddress
+        /// </summary>
+        /// <param name="socialRun">sets social media value</param>
+        /// <returns>radio.name = social media value</returns>
         internal static object SetRadioName(int socialRun)
         { System.Windows.Controls.RadioButton rdo = new System.Windows.Controls.RadioButton();
            
@@ -63,7 +72,7 @@ namespace screen_crawler.BUtility
             
         }
 
-
+        
         public static string SetURL {get; set;}
         public static int Dervalue {get; set;}
        
