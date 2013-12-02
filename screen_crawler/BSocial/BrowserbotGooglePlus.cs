@@ -31,7 +31,7 @@ namespace screen_crawler.BSocial
             Thread.Sleep(2000);
             //  findMe = startSearch.FindElement(By.XPath("//div[@guidedhelpid='sharbox_editor']/div[2]/div[@role='textbox']"));
             findMe = startDerSearch.FindElement(By.XPath("/html/body/div[2]/div[3]/div[2]/div[4]/div/div/div[2]/div/div[2]/div/div/div[2]/div/div[7]/div[2]/div[2]/div/div[2]/div[2]"));
-            findMe.SendKeys("this is hard");
+            findMe.SendKeys(ChosenWord);
             Thread.Sleep(2000);
             
             // this works but after the first time your on google plus, its no longer needed

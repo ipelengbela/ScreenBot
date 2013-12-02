@@ -32,7 +32,7 @@ namespace screen_crawler.BSocial
             
             findEle.Click();
             findEle = startDerSearch.FindElement(By.XPath("//textarea[@name='xhpc_message_text']"));
-            findEle.SendKeys("lol");
+            findEle.SendKeys(ChosenWord);
             findEle = startDerSearch.FindElement(By.XPath("//li/button[@type='submit']"));
             findEle.Click();
         }

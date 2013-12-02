@@ -12,6 +12,7 @@ using OpenQA.Selenium.Firefox;
 using System.Threading;
 //using OpenQA.Selenium.Chrome; // must download chromedriver download from google api in order for this dll to work
 using screen_crawler.BUtility;
+using screen_crawler.BReader;
 using Microsoft.Win32;
 
 namespace screen_crawler
@@ -98,8 +99,16 @@ namespace screen_crawler
             OpenFileDialog dg = new OpenFileDialog();
             dg.ShowDialog();
             ReadFile.FilePath = dg.FileName;
-            string r = ReadFile.ReadCSV();
-            MessageBox.Show(r);
+            //change this later after random gen 
+           
+            //string r =
+                ReadFile.ReadCSV();
+            
+            TextLooper getData = new TextLooper();
+            datatext.Visibility = Visibility.Visible;
+            datatext.Text = getData.Go();
+            
+            //MessageBox.Show(r);
         }
     }
 }

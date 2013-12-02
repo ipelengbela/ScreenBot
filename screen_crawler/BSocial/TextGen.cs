@@ -6,21 +6,10 @@ using screen_crawler.BUtility;
 
 namespace screen_crawler.BSocial 
 {
-   public class TextGen :IRandomTextGen
+   public class TextGen
     {
-        public string RandomDay()
-        {
-            throw new NotImplementedException();
-        }
-
-        public string DayOfWeek(string todaysDate)
-        {
-            throw new NotImplementedException();
-        }
-
-        public enum Day
-        {
-            Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
-        }
+       
+        public static string[] RandomWord { get; set; }
+        public static string ChosenWord { get; set; }
     }
 }

@@ -24,7 +24,7 @@ namespace screen_crawler.BSocial
             startDerSeach.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10.0));
             findDerEle = startDerSeach.FindElement(By.XPath("//div[@id='tweet-box-mini-home-profile']"));
             findDerEle.Click();
-            findDerEle.SendKeys("er mer gerd");
+            findDerEle.SendKeys(ChosenWord);
             startDerSeach.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10.0));
             findDerEle = startDerSeach.FindElement(By.XPath("//button[@class='btn primary-btn tweet-action js-tweet-btn']"));
             findDerEle.Click();

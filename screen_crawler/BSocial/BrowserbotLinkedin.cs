@@ -28,7 +28,7 @@ namespace screen_crawler.BSocial
             startSearch.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(20.0));
             findme = searchStart.FindElement(By.Name("postText"));
             findme.Click();
-            findme.SendKeys("hello li9nkedin");
+            findme.SendKeys(ChosenWord);
             Thread.Sleep(1000);// change this to implicitly wait
             findme = searchStart.FindElement(By.Id("share-submit"));
             findme.Click();
