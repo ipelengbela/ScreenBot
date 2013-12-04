@@ -20,10 +20,27 @@ namespace screen_crawler.BReader
               valu =  SelectWord.GetShortText();
             }
             while (maxChar > TextGen.ChosenWord.Length && valu);
-            
- 
-            return data = String.Format("this is what is going to be displayed :\n{0} \nbased on generation",TextGen.ChosenWord);
+           string test = TwitSpecial();
 
+            return data = String.Format("Twitter display :\n{0}\ncount:{1}",TextGen.TwitSpecial, test);
+
+        }
+
+        /// <summary>
+        /// needed to shorten string length just for twitter 140 character limit
+        /// </summary>
+        private string TwitSpecial()
+        {
+            string twittershort="";
+            if (TextGen.ChosenWord.Length > maxChar)
+            {
+                 twittershort = TextGen.ChosenWord;
+
+                TextGen.TwitSpecial = twittershort.Remove(140);
+                twittershort = TextGen.TwitSpecial.Length.ToString();
+                
+            }
+            return twittershort;
         }
     }
         

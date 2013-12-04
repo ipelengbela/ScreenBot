@@ -1,9 +1,11 @@
 ﻿<Window x:Class="screen_crawler.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="357" Width="525"
+        Style="{StaticResource DerStyle}">
+    
     <Grid>
-        <Button Content="Run Bot" Height="23" HorizontalAlignment="Left" Margin="416,276,0,0" Name="runAutomation_btn" VerticalAlignment="Top" Width="75" Click="runAutomation_btn_Click" IsDefault="True" />
+        <Button Content="Run Bot" Height="23" HorizontalAlignment="Left" Margin="416,276,0,0" Name="runAutomation_btn" VerticalAlignment="Top" Width="75" Click="runAutomation_btn_Click" IsDefault="True" Visibility="Visible" IsEnabled="False" />
         <StackPanel Height="154" HorizontalAlignment="Left" Margin="12,32,0,0" Name="stackPanel1" VerticalAlignment="Top" Width="182" Visibility="Visible" Cursor="Hand" ToolTip="select Social media to automatically comment " UseLayoutRounding="True">
             <RadioButton Content="LinkedIn"  Name="lkdn_Rdo" FontSize="20" Height="Auto" Padding="9,0,0,0" Margin="2" Checked="_Rdo_Checked" />
             <RadioButton Content="Google Plus"  Name="gPlus_Rdo" FontSize="20" Height="Auto" Padding="9,0,0,0" Margin="2" Checked="_Rdo_Checked" />
@@ -11,8 +13,8 @@
             <RadioButton Content="Twitter"  Name="Twit_Rdo" FontSize="20" Height="Auto" Padding="9,0,0,0" Margin="2"  Checked="_Rdo_Checked"/>
             <RadioButton Content="searchAll"  Name="All_Rdo" FontSize="20" Height="Auto" Padding="9,0,0,0" Margin="2"  Checked="_Rdo_Checked"/>
         </StackPanel>
-        <Button Content="Choose CSV File" Height="23" HorizontalAlignment="Left" Margin="14,202,0,0" Name="button1" VerticalAlignment="Top" Width="92" Click="button1_Click" />
-        <Canvas Height="100" HorizontalAlignment="Left" Margin="203,12,0,0" Name="Canvas_Single" VerticalAlignment="Top" Width="282">
+        <Button Content="Choose CSV File" Height="23" HorizontalAlignment="Left" Margin="14,202,0,0" Name="button1" VerticalAlignment="Top" Width="92" Click="button1_Click" IsEnabled="False" />
+        <Canvas Height="100" HorizontalAlignment="Left" Margin="198,32,0,0" Name="Canvas_Single" VerticalAlignment="Top" Width="282">
             <TextBox Height="23" Name="userName_txt" Width="120" Canvas.Left="15" Canvas.Top="34" />
             <TextBox Height="23" Name="pass_txt" Width="120" Canvas.Left="156" Canvas.Top="34" />
             <Label Content="user Name" Height="28" Name="genericname" Canvas.Left="15" Canvas.Top="6" />
@@ -37,5 +39,6 @@
             <TextBox Canvas.Left="152" Canvas.Top="207" Height="23" Name="password4" Width="120" />
         </Canvas>
         <TextBlock Height="56" HorizontalAlignment="Left" Margin="23,243,0,0" Name="datatext" Text="" VerticalAlignment="Top" Width="315" Visibility="Hidden"  />
+        <Label Content="Choose Social Media Site First" Height="28" HorizontalAlignment="Left" Margin="10,10,0,0" Name="label9" VerticalAlignment="Top" />
     </Grid>
 </Window>

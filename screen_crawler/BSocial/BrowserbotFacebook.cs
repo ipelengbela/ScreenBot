@@ -26,12 +26,15 @@ namespace screen_crawler.BSocial
 
          
             startDerSearch.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5.0));
+            System.Threading.Thread.Sleep(3000);
             // changed this to a config file since this may change 
             startDerSearch.Navigate().GoToUrl("https://www.facebook.com/?sk=nf");
             findEle = startDerSearch.FindElement(By.XPath("//textarea[@name='xhpc_message']"));
-            
+            startDerSearch.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10.0));
+           
             findEle.Click();
             findEle = startDerSearch.FindElement(By.XPath("//textarea[@name='xhpc_message_text']"));
+            System.Threading.Thread.Sleep(2000);
             findEle.SendKeys(ChosenWord);
             findEle = startDerSearch.FindElement(By.XPath("//li/button[@type='submit']"));
             findEle.Click();

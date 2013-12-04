@@ -50,6 +50,7 @@ namespace screen_crawler.BUtility
                     findme.SendKeys(uName);
                     findme = startSearch.FindElement(By.Name("session_password"));
                     findme.SendKeys(uPass);
+                    System.Threading.Thread.Sleep(1000);
                     findme = startSearch.FindElement(By.Name("signin"));
                     findme.Click();
                     return startSearch;
@@ -58,16 +59,20 @@ namespace screen_crawler.BUtility
                     findme.SendKeys(uName);
                     findme = startSearch.FindElement(By.Name("Passwd"));
                     findme.SendKeys(uPass);
+                    System.Threading.Thread.Sleep(5000);
                     findme = startSearch.FindElement(By.Name("PersistentCookie"));
                     findme.Click();
+                    System.Threading.Thread.Sleep(1000);
                     findme = startSearch.FindElement(By.Name("signIn"));
                     findme.Click();
                     return startSearch;
                 case 3: //facbook
                     findme = startSearch.FindElement(By.Id("email"));
                     findme.SendKeys(uName);
+                    System.Threading.Thread.Sleep(1000);
                     findme = startSearch.FindElement(By.Id("pass"));
                     findme.SendKeys(uPass);
+                    System.Threading.Thread.Sleep(1000);
                     findme = startSearch.FindElement(By.XPath("//*[@id='u_0_e']"));
                     findme.Click();
                     return startSearch;
@@ -77,8 +82,10 @@ namespace screen_crawler.BUtility
                     findme.Click();
                     findme.SendKeys(uName);
                     findme = startSearch.FindElement(By.XPath("//input[@id='signin-password']"));
+                    System.Threading.Thread.Sleep(1000);
                     findme.Click();
                     findme.SendKeys(uPass);
+                    System.Threading.Thread.Sleep(1000);
                     findme = startSearch.FindElement(By.XPath("//button[@class='submit btn primary-btn flex-table-btn js-submit']"));
                     findme.Click();
                     return startSearch;

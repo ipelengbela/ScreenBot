@@ -1,8 +1,14 @@
-﻿<Application x:Class="screen_crawler.App"
+﻿
+    <Application x:Class="screen_crawler.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="DerStyle" TargetType="Window">
+            <Setter Property="Canvas.Background" Value="Azure"></Setter>
+        
+        </Style>
+        
     </Application.Resources>
+    
 </Application>

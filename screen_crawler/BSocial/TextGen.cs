@@ -11,5 +11,6 @@ namespace screen_crawler.BSocial
        
         public static string[] RandomWord { get; set; }
         public static string ChosenWord { get; set; }
+        public static string TwitSpecial { get; set; }
     }
 }

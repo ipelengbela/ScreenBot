@@ -82,7 +82,7 @@ namespace screen_crawler
                 Canvas_Single.Visibility = Visibility.Visible;
                 multisocialCanvas.Visibility = Visibility.Hidden;
             }
-            
+            button1.IsEnabled = true;
           
         }
         public string setURL;
@@ -107,8 +107,9 @@ namespace screen_crawler
             TextLooper getData = new TextLooper();
             datatext.Visibility = Visibility.Visible;
             datatext.Text = getData.Go();
-            
-            //MessageBox.Show(r);
+        
+            runAutomation_btn.IsEnabled = true;
+           
         }
     }
 }
